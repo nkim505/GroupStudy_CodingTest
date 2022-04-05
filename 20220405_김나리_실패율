@@ -1,0 +1,25 @@
+# https://programmers.co.kr/learn/courses/30/lessons/42889?language=python3
+# updated : 20220405 (실패)
+
+def solution(N, stages):
+    answer = []
+    
+    stages_set = list(set(stages))
+    stages_set.sort()
+    
+    #분자 카운트수 만들기
+    numerators = {}
+    for stage in stages_set:
+    numerators[stage] = stages.count(stage)
+
+    #분모 카운트 수 만들기
+    denominators = {}
+    stages.sort()
+
+    for stage in stages_set:
+        point = stages.index(stage)
+        counts = len(stages[point:])
+        denominators[stage] = counts
+
+    
+    return answer
