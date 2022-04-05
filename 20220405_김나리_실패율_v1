@@ -47,3 +47,7 @@ def solution(N, stages):
     answer = sorted(rates, key = lambda x: rates[x], reverse=True)
     
     return answer
+      
+# sorted(dict, key = lambda x :..., reverse = False ) => x는 key였음.., 기본값이 F(오름차순)
+# list comprehension
+# https://wikidocs.net/22805
