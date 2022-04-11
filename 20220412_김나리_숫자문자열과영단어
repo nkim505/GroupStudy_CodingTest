@@ -1,0 +1,55 @@
+링크: https://programmers.co.kr/learn/courses/30/lessons/81301
+결과: 통과
+
+def solution(s):
+        
+    num_dict = {'zero':0, 'one':1, 
+                'two': 2, 'three':3, 
+                'four':4, 'five':5, 
+                'six':6, 'seven':7, 
+                'eight':8, 'nine':9}
+    
+    for key, value in num_dict.items():
+        s = s.replace(key, str(value))
+    
+    answer = int(s)
+        
+    return answer
+    
+    
+    
+    
+    
+#    ============= 더 짧은 풀이 
+def solution(s):
+    
+    answer = s
+    
+    num_dict = {'zero':0, 'one':1, 
+                'two': 2, 'three':3, 
+                'four':4, 'five':5, 
+                'six':6, 'seven':7, 
+                'eight':8, 'nine':9}
+    
+    for key, value in num_dict.items():
+        answer = answer.replace(key, str(value))
+           
+    return int(answer)
+    
+ #    ============== 왜 안되는지 궁금한 방법
+ 
+ def solution(s):
+    
+    num_dict = {'zero':0, 'one':1, 
+                'two': 2, 'three':3, 
+                'four':4, 'five':5, 
+                'six':6, 'seven':7, 
+                'eight':8, 'nine':9}
+    
+    for key, value in num_dict.items():
+        answer = s.replace(key, str(value))
+           
+    return int(answer)
+    
+    
+    # 이거 왜 오류나지.. replace 특성 때문인거 같은데..
