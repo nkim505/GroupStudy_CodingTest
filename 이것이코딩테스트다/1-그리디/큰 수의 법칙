@@ -1,0 +1,31 @@
+# 92page
+def sol():
+    n, m, k = map(int, input().split()) # 여러개를 하나의 type으로 바꿔줄 때 - map
+    lst = list(map(int,input().split()))
+
+    lst.sort(reverse = True) 
+
+    result = 0
+    idx = 0
+
+    while idx <= m:
+        for _ in range(k):
+            print(idx, '-> result before sum, ', result)
+            result += lst[0]
+            idx += 1
+            print(idx, '-> result after sum, ', result)
+            if idx == m:
+                break
+            else: pass
+
+        print(idx, '-> result before sum, ', result)
+        result += lst[1]
+        idx += 1
+        print(idx, '-> result after sum, ', result)
+        if idx == m:
+            break
+        else: pass
+
+    result
+
+sol()
